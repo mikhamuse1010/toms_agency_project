@@ -7,6 +7,7 @@ const Home = () => {
         titleLine1: "font-bold",
         titleLine3: "w-16 h-6 relative",
         titleLine3Underline: "w-full h-5 bg-yellow-400 absolute top-16 -z-20",
+        buttonContainer: "py-5",
         button: "px-10 py-4 bg-dark-purple text-white rounded-xl font-medium",
     }
 
@@ -22,9 +23,11 @@ const Home = () => {
             <p>
                 Lorem Ipsum has been the industry's standard dummy text ever <br /> since the 1500s, when an unknown printer took a galley of type and <br /> scrambled it to make a type specimen book.
             </p>
-            <button className={className.button}>
-                Get Started
-            </button>
+            <div className={className.buttonContainer}>
+                <a href="#AboutUs" className={className.button}>
+                    Get Started
+                </a>
+            </div>
         </div>
     </div>
 }

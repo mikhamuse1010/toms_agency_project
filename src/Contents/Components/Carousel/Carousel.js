@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import './Carousel.css';
 
 const Carousel = (props) => {
@@ -54,13 +54,7 @@ const Carousel = (props) => {
 
     return (
         <div className="carousel-container">
-            <div className="carousel-wrapper">
-                {
-                    currentIndex > 0 &&
-                    <button onClick={prev} className="left-arrow">
-                        <FaArrowLeft />
-                    </button>
-                }
+            <div className="carousel-wrapper pl-10">
                 <div
                     className="carousel-content-wrapper"
                     onTouchStart={handleTouchStart}
@@ -73,14 +67,18 @@ const Carousel = (props) => {
                         {children}
                     </div>
                 </div>
-                {
-                    currentIndex < (Length - show) &&
-                    <button onClick={next} className="right-arrow">
-                        <FaArrowRight />
-                    </button>
-                }
+            </div>
+
+            <div className="w-full h-fit px-10 flex space-x-3 mt-10">
+                <button onClick={prev} className={`left-arrow ${currentIndex > 0 && "border-black cursor-pointer"}`}>
+                    <FaChevronLeft className={`text-[#bababa] ${currentIndex > 0 && "text-black"}`} />
+                </button>
+                <button onClick={next} className={`right-arrow ${currentIndex < (Length - show) && "border-black cursor-pointer"}`}>
+                    <FaChevronRight className={`text-[#bababa] ${currentIndex < (Length - show) && "text-black"}`} />
+                </button>
             </div>
         </div>
+
     )
 }
 
