@@ -3,7 +3,9 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import './Carousel.css';
 
 const Carousel = (props) => {
-    const { children, show } = props;
+    var { children, show } = props;
+
+    const [windowSize, setWindowSize] = useState(getWindowSize());
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [Length, setLength] = useState(children && children.length);
@@ -12,6 +14,15 @@ const Carousel = (props) => {
 
     useEffect(() => {
         setLength(children && children.length);
+        function handleWindowResize() {
+            setWindowSize(getWindowSize());
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        }
     }, [children]);
 
     const next = () => {
@@ -52,16 +63,40 @@ const Carousel = (props) => {
         setTouchPosition(null)
     }
 
+    var carouselCountDisplay;
+
+
+    if (show > 2) {
+        if (windowSize.innerWidth <= 1100 && windowSize.innerWidth > 730) {
+            show = 2;
+            carouselCountDisplay = `show-${show}`;
+        } else if (windowSize.innerWidth <= 730 && windowSize.innerWidth > 0) {
+            show = 1;
+            carouselCountDisplay = `show-${show}`;
+        } else {
+            carouselCountDisplay = `show-${show}`;
+        }
+    } else {
+        if (windowSize.innerWidth <= 1100 && windowSize.innerWidth > 0) {
+            show = 1;
+            carouselCountDisplay = `show-${show}`;
+        } else {
+            carouselCountDisplay = `show-${show}`;
+        }
+    }
+
     return (
         <div className="carousel-container">
-            <div className="carousel-wrapper pl-10">
+            <div className="carousel-wrapper">
                 <div
                     className="carousel-content-wrapper"
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
                 >
                     <div
-                        className={`carousel-content show-${show}`}
+                        className={
+                            `carousel-content ${carouselCountDisplay}`
+                        }
                         style={{ transform: `translateX(-${currentIndex * (100 / show)}%)` }}
                     >
                         {children}
@@ -69,12 +104,22 @@ const Carousel = (props) => {
                 </div>
             </div>
 
-            <div className="w-full h-fit px-10 flex space-x-3 mt-10">
-                <button onClick={prev} className={`left-arrow ${currentIndex > 0 && "border-black cursor-pointer"}`}>
-                    <FaChevronLeft className={`text-[#bababa] ${currentIndex > 0 && "text-black"}`} />
+            <div className="carousel-button-container space-x-3">
+                <button onClick={prev} className={
+                    `left-arrow ${currentIndex > 0 && "border-black cursor-pointer"}`
+                }>
+
+                    <FaChevronLeft className={`text-[#bababa] 
+                    ${currentIndex > 0 && "text-black"}`} />
+
                 </button>
-                <button onClick={next} className={`right-arrow ${currentIndex < (Length - show) && "border-black cursor-pointer"}`}>
+
+                <button onClick={next} className={
+                    `right-arrow ${currentIndex < (Length - show) && "border-black cursor-pointer"}`
+                }>
+
                     <FaChevronRight className={`text-[#bababa] ${currentIndex < (Length - show) && "text-black"}`} />
+
                 </button>
             </div>
         </div>
@@ -83,3 +128,8 @@ const Carousel = (props) => {
 }
 
 export default Carousel;
+
+export function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+}

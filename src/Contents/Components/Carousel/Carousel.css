@@ -9,6 +9,7 @@
     display: flex;
     width: 100%;
     position: relative;
+    padding-left: 40px;
 }
 
 .carousel-content-wrapper {
@@ -16,6 +17,15 @@
     overflow: hidden;
     width: 100%;
     height: 100%;
+}
+
+.carousel-button-container {
+    width: 100%;
+    height: fit-content;
+    padding-right: 40px;
+    padding-left: 40px;
+    display: flex;
+    margin-top: 40px;
 }
 
 .carousel-content::-webkit-scrollbar,
@@ -36,12 +46,16 @@
     flex-grow: 1;
 }
 
+.carousel-content.show-1 > * {
+    width: 100%;
+}
+
 .carousel-content.show-2 > * {
     width: 50%;
 }
 
 .carousel-content.show-3 > * {
-    width: calc(100% / 3);
+    width: calc(95% / 3);
 }
 
 .carousel-content.show-4 > * {

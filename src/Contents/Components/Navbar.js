@@ -7,7 +7,9 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 const Navbar = () => {
 
     const className = {
-        navContainer: "inset-x-0 fixed top-0 flex justify-around py-5 bg-white/20",
+        navContainer: "inset-x-0 fixed top-0 py-5 bg-white/20",
+        desktopDisplay: "w-full h-fit hidden lg:flex justify-around ",
+        mobileDisplay: "w-full h-fit block lg:hidden",
         ul1: "list-none space-x-6 inline-flex font-hindVadodara",
         navTitle: "font-Playfair font-bold text-xl",
         ul2: "list-none space-x-3 inline-flex w-fit",
@@ -16,33 +18,38 @@ const Navbar = () => {
     }
 
     return <div className={className.navContainer}>
-        <ul className={className.ul1}>
-            <li><a className="font-bold border-b-4 border-yellow-300" href="#">Home</a></li>
-            <li><a href="#AboutUs">About Us</a></li>
-            <li><a href="#Services">Services</a></li>
-            <li><a href="#ContactUs">Contact Us</a></li>
-        </ul>
-        <h1 className={className.navTitle}>
-            Toms Agency
-        </h1>
-        <ul className={className.ul2}>
-            <li>
-                <button href="#" className={className.navButtons}>
-                    <FaFacebookF />
-                </button>
-            </li>
-            <li>
-                <button href="#" className={className.navButtons}>
-                    <FaLinkedinIn />
-                </button>
-            </li>
-            <li>
-                <button href="#" className={className.navButtons}>
-                    <FaInstagram />
-                </button>
-            </li>
-            <li className={className.dummyStabilizer} />
-        </ul>
+        <div className={className.desktopDisplay}>
+            <ul className={className.ul1}>
+                <li><a className="font-bold border-b-4 border-yellow-300" href="#">Home</a></li>
+                <li><a href="#AboutUs">About Us</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#ContactUs">Contact Us</a></li>
+            </ul>
+            <h1 className={className.navTitle}>
+                Toms Agency
+            </h1>
+            <ul className={className.ul2}>
+                <li>
+                    <button href="#" className={className.navButtons}>
+                        <FaFacebookF />
+                    </button>
+                </li>
+                <li>
+                    <button href="#" className={className.navButtons}>
+                        <FaLinkedinIn />
+                    </button>
+                </li>
+                <li>
+                    <button href="#" className={className.navButtons}>
+                        <FaInstagram />
+                    </button>
+                </li>
+                <li className={className.dummyStabilizer} />
+            </ul>
+        </div>
+        <div className={className.mobileDisplay}>
+
+        </div>
     </div>
 }
 
