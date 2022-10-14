@@ -17,12 +17,12 @@ const OurWork = () => {
         container: "w-screen h-auto lg:h-screen relative overflow-hidden py-14 px-6",
         image: "w-auto h-full right-0 absolute top-0 -z-20",
         innerContainer: "h-screen space-y-10",
-        titleContainer: "w-full h-fit flex-col space-y-4 text-center lg:flex-row lg:text-start lg:flex lg:justify-between font-hindVadodara",
+        titleContainer: "w-full h-fit flex-col space-y-4 text-center items-center lg:flex-row lg:text-start flex lg:justify-between font-hindVadodara",
         title: "text-4xl z-20",
         titleLine1: "font-bold",
         titleLine3: "w-16 h-6 relative",
         titleLine3Underline: "w-full h-2 bg-yellow-400 absolute top-9 inset-x-0 -z-10",
-        description: "w-auto lg:w-[500px]",
+        description: "w-[500px]",
         cardOuterContainer: "flex justify-center",
         cardContainer: "w-fit h-fit rounded-xl p-5 bg-white shadow-lg space-y-4",
         cardImagesContainer: "flex space-x-5",
@@ -41,9 +41,11 @@ const OurWork = () => {
                     <h1 className={className.title}>
                         <span className={className.titleLine1}>Our Recent Work </span><br /> By Our <span className={className.titleLine3}>Experts <div className={className.titleLine3Underline} /></span>
                     </h1>
-                    <p className={className.description}>
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
+                    <div className={className.description}>
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
                 </div>
 
                 <Carousel show={2}>
