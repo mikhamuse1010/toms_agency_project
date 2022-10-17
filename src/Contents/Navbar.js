@@ -56,8 +56,9 @@ const Navbar = () => {
       hoverDesktop || hoverMobile ? "bg-white h-auto" : "bg-white/50 h-20"
     }`,
     desktopDisplay: "w-full h-fit hidden lg:flex justify-around",
-    mobileDisplay:
-      "w-full h-fit grid place-items-center lg:hidden transform duration-200",
+    mobileDisplay: `w-full grid place-items-center lg:hidden transform duration-200 ${
+      hoverDesktop || hoverMobile ? "h-fit" : "h-20"
+    }`,
     collapsibleMenu: `${
       hoverMobile ? "visible bg-white" : "invisible bg-transparent"
     } py-5 w-full h-fit text-center -z-10 transform duration-200`,
@@ -92,7 +93,6 @@ const Navbar = () => {
   return (
     <div className={className.navContainer}>
       <div className={className.desktopDisplay}>
-        
         <ul
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
@@ -124,13 +124,15 @@ const Navbar = () => {
           </li>
         </ul>
         <div className={className.titleContainer}>
-          <h1
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            className={className.navTitle}
-          >
-            Toms Agency
-          </h1>
+          <a href="#">
+            <h1
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+              className={className.navTitle}
+            >
+              Toms Agency
+            </h1>
+          </a>
         </div>
 
         <ul
@@ -155,7 +157,6 @@ const Navbar = () => {
           </li>
           <li className={className.dummyStabilizer} />
         </ul>
-
       </div>
 
       <div className={className.mobileDisplay}>
@@ -173,7 +174,6 @@ const Navbar = () => {
           onMouseLeave={onMouseLeave}
           className={className.collapsibleMenu}
         >
-
           <ul className={className.ul1Mob}>
             <li>
               <a href="#" className={className.ul1Links}>
@@ -220,7 +220,6 @@ const Navbar = () => {
               </button>
             </li>
           </ul>
-
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { FaEnvelope, FaGithub, FaMap, FaPhone } from "react-icons/fa";
 
 const Footer = () => {
@@ -16,7 +17,9 @@ const Footer = () => {
   return (
     <div className={className.Container}>
       <div className={className.innerContainer}>
-        <h1 className={className.Title}>Toms Agency</h1>
+        <a href="#">
+          <h1 className={className.Title}>Toms Agency</h1>
+        </a>
         <p className={className.description}>
           <span className={className.list}>
             <FaMap />

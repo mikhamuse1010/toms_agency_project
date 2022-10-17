@@ -30,7 +30,7 @@ const Home = () => {
           <br /> scrambled it to make a type specimen book.
         </p>
         <div className={className.buttonContainer}>
-          <a href="#WWD" className={className.button}>
+          <a href="#Services" className={className.button}>
             Get Started
           </a>
         </div>

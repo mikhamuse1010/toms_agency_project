@@ -4,7 +4,7 @@ import Footer from "./Contents/Footer";
 import Home from "./Contents/Home";
 import OurWork from "./Contents/OurWork";
 import Testimonial from "./Contents/Testimonial";
-import WWD from "./Contents/WWD";
+import Services from "./Contents/Services";
 
 export const SpaceContainer = () => <div className={`my-[150px]`} />;
 
@@ -15,7 +15,7 @@ function App() {
 
       <SpaceContainer />
 
-      <WWD />
+      <Services />
 
       <AboutUs />
 

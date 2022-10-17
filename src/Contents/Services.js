@@ -29,7 +29,7 @@ const WWD = () => {
   };
 
   return (
-    <div id="WWD" className={className.container}>
+    <div id="Services" className={className.container}>
       <img
         src={WwdImage}
         className={className.image}
