@@ -21,6 +21,15 @@ module.exports = {
       colors: {
         'dark-purple': '#331B3B',
       },
+      spacing: {
+        '100': '36rem',
+      },
+      height: {
+        'screenLg': '120vh',
+      },
+      width: {
+        'screenLg': '120vw',
+      }
     },
   },
   plugins: [],
