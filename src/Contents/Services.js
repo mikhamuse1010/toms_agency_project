@@ -12,8 +12,8 @@ const WWD = () => {
   }, []);
 
   const className = {
-    container: "w-screen h-screen py-14 relative overflow-hidden",
-    image: "w-full h-full -z-20 absolute top-0 object-contain",
+    container: "w-screen h-screen py-20 relative overflow-hidden",
+    image: "w-full h-full -z-20 absolute top-0 inset-x-0 object-contain",
     innerContainer: "h-screen space-y-10",
     titleContainer: "w-full h-fit text-center font-hindVadodara",
     title: "text-4xl z-20",
@@ -29,7 +29,7 @@ const WWD = () => {
   };
 
   return (
-    <div id="Services" className={className.container}>
+    <div className={className.container}>
       <img
         src={WwdImage}
         className={className.image}
@@ -37,7 +37,7 @@ const WWD = () => {
       />
       <div className={className.innerContainer}>
         <div className={className.titleContainer}>
-          <h1 className={className.title}>
+          <h1 id="Services" className={className.title}>
             <span className={className.titleLine1}>What We Do </span>
             <br /> For Your{" "}
             <span className={className.titleLine3}>
