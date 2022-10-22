@@ -4,7 +4,7 @@ const Footer = () => {
   const className = {
     Container:
       "w-screen h-fit p-14 rounded-tr-[200px] bg-black flex justify-center",
-    map: "w-[500px] lg:w-full h-[300px] border-none",
+    map: "w-fit md:w-[500px] lg:w-full h-[300px] border-none",
     mapBox: "w-full h-full flex justify-center items-center",
     innerBox: "w-fit h-fit space-y-5",
     Title: "font-bold",

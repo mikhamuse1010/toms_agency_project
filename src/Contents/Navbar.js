@@ -52,7 +52,7 @@ const Navbar = () => {
   }
 
   const className = {
-    navContainer: `inset-x-0 fixed top-0 py-5 transform duration-200 z-50 ${
+    navContainer: `inset-x-0 absolute top-0 py-5 transform duration-200 z-50 ${
       hoverDesktop || hoverMobile ? "bg-white h-auto" : "bg-white/50 h-20"
     }`,
     desktopDisplay: "w-full h-fit hidden lg:flex justify-around",
