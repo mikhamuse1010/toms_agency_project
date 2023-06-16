@@ -1,10 +1,10 @@
-// import AboutUs from "./Contents/AboutUs";
 import Navbar from "./Contents/Navbar";
-// import Footer from "./Contents/Footer";
 import Home from "./Contents/Home";
+import Services from "./Contents/Services";
+// import Footer from "./Contents/Footer";
+// import AboutUs from "./Contents/AboutUs";
 // import OurWork from "./Contents/OurWork";
 // import Testimonial from "./Contents/Testimonial";
-// import Services from "./Contents/Services";
 
 export const SpaceContainer = () => <div className={`my-[150px]`} />;
 
@@ -15,7 +15,7 @@ function App() {
 
       <SpaceContainer />
 
-      {/* <Services /> */}
+      <Services />
 
       {/* <AboutUs /> */}
 
