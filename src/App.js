@@ -1,6 +1,7 @@
 import Navbar from "./Contents/Navbar";
 import Home from "./Contents/Home";
 import Services from "./Contents/Services";
+import React from 'react';
 // import Footer from "./Contents/Footer";
 // import AboutUs from "./Contents/AboutUs";
 // import OurWork from "./Contents/OurWork";

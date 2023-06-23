@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./Carousel.css";
+import React from 'react';
 
 const Carousel = (props) => {
   var { children, show } = props;

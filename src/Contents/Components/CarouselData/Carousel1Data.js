@@ -1,5 +1,6 @@
 import { FaLaptopCode } from "react-icons/fa";
 import { TbDeviceMobile, TbRocket, TbWorld } from "react-icons/tb";
+import React  from 'react';
 
 const Carousel1Data = [
     {
