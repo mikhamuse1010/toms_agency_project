@@ -2,8 +2,8 @@ import Navbar from "./Contents/Navbar";
 import Home from "./Contents/Home";
 import Services from "./Contents/Services";
 import React from 'react';
+import AboutUs from "./Contents/AboutUs";
 // import Footer from "./Contents/Footer";
-// import AboutUs from "./Contents/AboutUs";
 // import OurWork from "./Contents/OurWork";
 // import Testimonial from "./Contents/Testimonial";
 
@@ -18,7 +18,7 @@ function App() {
 
       <Services />
 
-      {/* <AboutUs /> */}
+      <AboutUs />
 
       {/* <SpaceContainer /> */}
 

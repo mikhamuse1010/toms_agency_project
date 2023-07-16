@@ -5,7 +5,6 @@
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import React from 'react';
 
 const Navbar = () => {
   const [hoverDesktop, setHoverDesktop] = useState(false);
@@ -100,7 +99,7 @@ const Navbar = () => {
           className={className.ul1}
         >
           <li>
-            <a className={className.ul1Links} href="#Home">
+            <a className={className.ul1Links} href="#">
               Home
               <div className={className.underline.first} />
             </a>
