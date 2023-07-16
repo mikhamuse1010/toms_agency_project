@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -99,7 +99,7 @@ const Navbar = () => {
           className={className.ul1}
         >
           <li>
-            <a className={className.ul1Links} href="#">
+            <a className={className.ul1Links} href="#Home">
               Home
               <div className={className.underline.first} />
             </a>
@@ -124,7 +124,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className={className.titleContainer}>
-          <a href="#">
+          <a href="#Home">
             <h1
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
@@ -176,7 +176,7 @@ const Navbar = () => {
         >
           <ul className={className.ul1Mob}>
             <li>
-              <a href="#" className={className.ul1Links}>
+              <a href="#Home" className={className.ul1Links}>
                 Home
                 <div className={className.underlineMob.first} />
               </a>

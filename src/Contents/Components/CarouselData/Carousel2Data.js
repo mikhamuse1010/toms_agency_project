@@ -3,7 +3,6 @@ import Desktop2 from '../../../Attachments/Images/Desktop2.png';
 import Desktop3 from '../../../Attachments/Images/Desktop3.png';
 import Mobile1 from '../../../Attachments/Images/Mobile1.png';
 import Mobile2 from '../../../Attachments/Images/Mobile2.png';
-import React from 'react';
 
 const Carousel2Data = [
     {
