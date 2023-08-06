@@ -3,8 +3,8 @@ import Home from "./Contents/Home";
 import Services from "./Contents/Services";
 import React from 'react';
 import AboutUs from "./Contents/AboutUs";
+import OurWork from "./Contents/OurWork";
 // import Footer from "./Contents/Footer";
-// import OurWork from "./Contents/OurWork";
 // import Testimonial from "./Contents/Testimonial";
 
 export const SpaceContainer = () => <div className={`my-[150px]`} />;
@@ -20,9 +20,9 @@ function App() {
 
       <AboutUs />
 
-      {/* <SpaceContainer /> */}
+      <SpaceContainer />
 
-      {/* <OurWork /> */}
+      <OurWork />
 
       {/* <Testimonial /> */}
 

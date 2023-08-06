@@ -1,7 +1,4 @@
 import graphicBorderedImg from "../Attachments/Images/AboutUs.png";
-import React  from 'react';
-import Carousel from "./Components/Carousel/Carousel";
-import Carousel2Data from "./Components/CarouselData/Carousel2Data";
 
 const AboutUs = () => {
   const className = {
@@ -51,29 +48,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-        <Carousel show={3}>
-          {Carousel2Data.map((data, index) => {
-            return (
-              <div
-                data-aos="fade-down"
-                className={className.cardOuterContainer}
-                key={index}
-              >
-                <div className={className.cardContainer}>
-                  <div
-                    className={`${data.iconsBG} ${className.cardIconContainer}`}
-                  >
-                    {data.Icons}
-                  </div>
-                  <div className={className.cardDetailsContainer}>
-                    <h1 className={className.cardTitle}>{data.title}</h1>
-                    <p>{data.subtitle}</p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </Carousel>
     </div>
   );
 };
