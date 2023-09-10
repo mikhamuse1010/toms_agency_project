@@ -1,4 +1,5 @@
 import graphicBorderedImg from "../Attachments/Images/AboutUs.png";
+import React  from 'react';
 
 const AboutUs = () => {
   const className = {

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import React  from "react";
 import AOS from "aos";
 import background from "../Attachments/Images/OurWorks.png";
 import Carousel from "./Components/Carousel/Carousel";
