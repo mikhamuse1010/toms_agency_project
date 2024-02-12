@@ -5,7 +5,7 @@ import React from 'react';
 import AboutUs from "./Contents/AboutUs";
 import OurWork from "./Contents/OurWork";
 // import Footer from "./Contents/Footer";
-// import Testimonial from "./Contents/Testimonial";
+import Testimonial from "./Contents/Testimonial";
 
 export const SpaceContainer = () => <div className={`my-[150px]`} />;
 
@@ -24,9 +24,7 @@ function App() {
 
       <OurWork />
 
-      {/* <Testimonial /> */}
-
-      {/* <Footer /> */}
+      <Testimonial />
 
       <Navbar />
     </div>
